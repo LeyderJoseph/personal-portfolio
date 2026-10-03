@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de Leyder Joseph Martínez López, Contador Público y Desarrollador Junior.">
+  <title>Leyder Martínez | Portafolio</title>
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/logo.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png">
+
+  <!-- css de la plantilla -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- fuente de Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Estilos mínimos propios: botón de CV, mensaje del formulario, etiquetas de skills y tecnologías.
+       Los dejo aquí para no tener que tocar el style.css de la plantilla. -->
+  <style>
+    .cv-btn { text-decoration: none; margin-top: 15px; }
+    .form-status { margin-top: 12px; font-size: 14px; color: var(--light-gray, #ccc); }
+    .form-status.ok { color: #7bd88f; }
+    .form-status.error { color: #ff7b7b; }
+
+    /* Etiquetas de habilidades (reemplazan a las barras de porcentaje) */
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; }
+    .skill-tags li {
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      color: var(--light-gray, #ddd);
+      background: var(--onyx, #252526);
+      border: 1px solid var(--jet, #383838);
+    }
+
+    /* Línea de tecnologías debajo de la categoría de cada proyecto */
+    .project-tech { font-size: 13px; font-weight: 300; color: var(--light-gray-70, #aaa); margin-top: 2px; }
+  </style>
+</head>
+
+<body>
+
+  <main>
+
+    <!-- ===================== SIDEBAR ===================== -->
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/mi-foto.jpg" alt="Leyder Joseph Martínez López" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Leyder Joseph Martínez López">Leyder Martínez</h1>
+
+          <p class="title">Contador Público / Desarrollador Junior</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Mostrar contacto</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Correo</p>
+
+              <a href="mailto:leyder-joseph.13@hotmail.es" class="contact-link">leyder-joseph.13@hotmail.es</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Teléfono</p>
+
+              <a href="tel:+573209596175" class="contact-link">+57 320 959 6175</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Ubicación</p>
+
+              <address>Floridablanca, Santander, Colombia</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/leyderjm/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/LeyderJoseph" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+        <!-- Botón de descarga del CV (reutiliza el estilo .form-btn de la plantilla) -->
+        <a href="./assets/cv-leyder-martinez.pdf" class="form-btn cv-btn" download>
+          <ion-icon name="download-outline"></ion-icon>
+          <span>Descargar CV</span>
+        </a>
+
+      </div>
+
+    </aside>
+
+
+    <!-- ===================== CONTENIDO ===================== -->
+    <div class="main-content">
+
+      <!-- NAVBAR
+           Profesor: cada botón lleva data-nav-link="nombre" y cada página data-page="nombre".
+           El script las enlaza por ese valor, así puedo traducir los textos sin romper nada. -->
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link="sobre-mi">Sobre mí</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="curriculum">Currículum</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="proyectos">Proyectos</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="contacto">Contacto</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+      <!-- ===================== SOBRE MÍ ===================== -->
+      <article class="about active" data-page="sobre-mi">
+
+        <header>
+          <h2 class="h2 article-title">Sobre mí</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Profesional con experiencia laboral en el sector administrativo financiero, actualmente enfocado en el
+            desarrollo de software. Combino una capacidad probada para el manejo de lógica de sistemas y estructuras
+            de datos con una fuerte pasión por la tecnología. Mi objetivo es aplicar mi disciplina y experiencia
+            profesional previa en un entorno de desarrollo que valore la precisión, el aprendizaje constante y la
+            mejora de procesos mediante software.
+          </p>
+
+          <p>
+            Competencias: liderazgo, creatividad, empatía, disciplina, paciencia, proactividad, comunicación y
+            adaptabilidad. Idiomas: inglés (B2).
+          </p>
+        </section>
+
+
+        <!-- Lo que hago (uso íconos de ionicons en lugar de imágenes para no depender de archivos extra) -->
+        <section class="service">
+
+          <h3 class="h3 service-title">Lo que hago</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="code-slash-outline" style="font-size: 40px; color: var(--orange-yellow-crayola);"></ion-icon>
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Desarrollo web</h4>
+
+                <p class="service-item-text">
+                  Construcción de sitios con HTML, CSS y JavaScript, con control de versiones en Git y GitHub.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="git-branch-outline" style="font-size: 40px; color: var(--orange-yellow-crayola);"></ion-icon>
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Lógica y programación</h4>
+
+                <p class="service-item-text">
+                  Resolución de problemas con Python y lógica de programación, trabajando con metodología Scrum.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="calculator-outline" style="font-size: 40px; color: var(--orange-yellow-crayola);"></ion-icon>
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Contabilidad e impuestos</h4>
+
+                <p class="service-item-text">
+                  Registro contable, informes financieros y proyección y presentación de impuestos ante la DIAN.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="swap-horizontal-outline" style="font-size: 40px; color: var(--orange-yellow-crayola);"></ion-icon>
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Migración y auditoría de datos</h4>
+
+                <p class="service-item-text">
+                  Saneamiento y carga de información entre sistemas ERP, garantizando datos exactos y sin errores.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      <!-- ===================== CURRÍCULUM ===================== -->
+      <article class="resume" data-page="curriculum">
+
+        <header>
+          <h2 class="h2 article-title">Currículum</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Formación</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Técnico Laboral en Desarrollo de Software</h4>
+              <span>Actualidad</span>
+              <p class="timeline-text">Campuslands, Floridablanca.</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Técnico Académico con Conocimientos en Inglés</h4>
+              <span>2025</span>
+              <p class="timeline-text">Praxis, Bucaramanga.</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Contador Público</h4>
+              <span>2022</span>
+              <p class="timeline-text">Unidades Tecnológicas de Santander, Barrancabermeja.</p>
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experiencia</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Auxiliar Contable · Insak SAS</h4>
+              <span>2026</span>
+              <p class="timeline-text">
+                Ejecuté el proyecto de migración y auditoría de datos en la transición del ERP Ziur hacia Siesa,
+                enfocándome en los módulos de Activos Fijos y Terceros. Realicé el levantamiento y saneamiento
+                integral de la información, identificando y corrigiendo inconsistencias en los cálculos históricos
+                de activos fijos. Además, adecué las estructuras de datos y los conectores requeridos por el nuevo
+                software, asegurando una carga de información exacta, sin errores y garantizando la integridad de la
+                operación contable en el nuevo sistema.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Analista Contable · Mundo Casino Catering SAS</h4>
+              <span>2021 — 2024</span>
+              <p class="timeline-text">
+                Mi enfoque principal estuvo en el área contable: registro de las operaciones en el software contable,
+                elaboración de informes financieros y contables para la toma de decisiones, proyección de impuestos y
+                presentación de estos en la página de la DIAN. Adquirí una gran capacidad de análisis y conocimiento
+                en el régimen ordinario y simple de tributación.
+              </p>
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">Habilidades técnicas</h3>
+
+          <ul class="skill-tags content-card">
+            <li>Lógica de programación</li>
+            <li>PSeInt</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>HTML y CSS</li>
+            <li>MySQL</li>
+            <li>Git y GitHub</li>
+            <li>Scrum</li>
+            <li>Linux</li>
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      <!-- ===================== PROYECTOS ===================== -->
+      <article class="portfolio" data-page="proyectos">
+
+        <header>
+          <h2 class="h2 article-title">Proyectos</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>Todos</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Gestión</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Aplicaciones</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Seleccionar categoría</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>Todos</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Gestión</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Aplicaciones</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item active" data-filter-item data-category="gestión">
+              <a href="https://github.com/LeyderJoseph/proyecto_herramientas" target="_blank" rel="noopener">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/herramientas.jpg" alt="Herramientas de trabajo sobre fondo azul" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Gestión de herramientas</h3>
+
+                <p class="project-category">Gestión</p>
+                <!-- PENDIENTE: <p class="project-tech">Tecnologías aquí</p> -->
+
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="gestión">
+              <a href="https://github.com/LeyderJoseph/Proyecto_gestionar_cafeteria" target="_blank" rel="noopener">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/cafeteria.jpg" alt="Interior de una cafetería moderna" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Gestión de cafetería</h3>
+
+                <p class="project-category">Gestión</p>
+                <p class="project-tech">Git · Línea de comandos</p>
+
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="aplicaciones">
+              <a href="https://github.com/LeyderJoseph/app_mascotas" target="_blank" rel="noopener">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/mascotas.jpg" alt="Gato, perro y loro junto a un transportador de mascotas" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">App para mascotas</h3>
+
+                <p class="project-category">Aplicaciones</p>
+                <!-- PENDIENTE: <p class="project-tech">Tecnologías aquí</p> -->
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      <!-- ===================== CONTACTO ===================== -->
+      <article class="contact" data-page="contacto">
+
+        <header>
+          <h2 class="h2 article-title">Contacto</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps?q=Floridablanca,+Santander,+Colombia&output=embed"
+              title="Mapa de Floridablanca, Santander" width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Escríbeme</h3>
+
+          <!-- Profesor: el envío lo maneja assets/js/script.js con fetch (sin recargar la página).
+               El campo _honey es una trampa anti-spam: los humanos no lo ven, los bots sí lo llenan. -->
+          <form class="form" data-form novalidate>
+
+            <div class="input-wrapper">
+              <input type="text" name="name" class="form-input" placeholder="Nombre completo" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Correo electrónico" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Tu mensaje" required data-form-input></textarea>
+
+            <input type="text" name="_honey" style="display: none;" tabindex="-1" autocomplete="off">
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Enviar mensaje</span>
+            </button>
+
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+  <!-- js propio (reemplaza al script.js de la plantilla) -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
