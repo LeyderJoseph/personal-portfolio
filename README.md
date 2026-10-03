@@ -1,6 +1,6 @@
 # Portafolio - Leyder Joseph Martínez López
 
-🔗 **Sitio en vivo:** https://leyderjoseph.github.io/leyder-martinez-repositorio/
+🔗 **Sitio en vivo:**    https://leyderjoseph.github.io/personal-portfolio/
 
 Portafolio personal de **Contador Público y Desarrollador Junior**, construido con HTML, CSS y JavaScript puro. Es responsive y funciona en escritorio y móvil.
 
@@ -35,7 +35,7 @@ El formulario usa [FormSubmit](https://formsubmit.co). Al enviar el primer mensa
 ## Cómo verlo en local
 
 ```bash
-git clone https://github.com/LeyderJoseph/leyder-martinez-repositorio.git
+git clone https://github.com/LeyderJoseph/personal-portfolio.git
 ```
 
 Abre la carpeta en VS Code y usa la extensión **Live Server** sobre `index.html`.
